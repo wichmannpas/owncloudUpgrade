@@ -3,6 +3,8 @@ OwncloudUpgrade
 
 This is a shell script that completely automates the owncloud upgrade process.
 
+**Attention:** Yet, it is necessary to activate all non-default Owncloud apps manually after running this upgrade. Owncloud will have no apps enabled after the upgrade.
+
 Requirements
 ------------
 
