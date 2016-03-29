@@ -65,7 +65,7 @@ mkdir /tmp/owncloudUpgrade
 cd /tmp/owncloudUpgrade
 
 # download owncloud archive and extract it
-curl https://download.owncloud.org/community/owncloud-${$1}.tar.bz2 | tar -xj
+curl https://download.owncloud.org/community/owncloud-${1}.tar.bz2 | tar -xj
 
 # turn owncloud maintenance mode on
 sudo -u $webUser $phpPath ${owncloudPath}occ maintenance:mode --on
