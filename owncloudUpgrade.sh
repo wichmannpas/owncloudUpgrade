@@ -73,11 +73,11 @@ sudo -u $webUser $phpPath ${owncloudPath}occ maintenance:mode --on
 # move new files
 rsync -a owncloud/ $owncloudPath
 
-# database upgrade
-sudo -u $webUser $phpPath ${owncloudPath}occ upgrade
-
 # turn maintenance mode off
 sudo -u $webUser $phpPath ${owncloudPath}occ maintenance:mode --off
+
+# database upgrade
+sudo -u $webUser $phpPath ${owncloudPath}occ upgrade
 
 # remove temporary owncloud upgrade directory
 rm -rf /tmp/owncloudUpgrade
