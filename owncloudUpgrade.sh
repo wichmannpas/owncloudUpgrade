@@ -73,6 +73,9 @@ sudo -u $webUser $phpPath ${owncloudPath}occ maintenance:mode --on
 # move new files
 rsync -a owncloud/ $owncloudPath
 
+# set correct permissions on new files
+chown -R $webUser:$webUser $owncloudPath
+
 # turn maintenance mode off
 sudo -u $webUser $phpPath ${owncloudPath}occ maintenance:mode --off
 
