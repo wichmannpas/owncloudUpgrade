@@ -51,6 +51,7 @@ mkdir -p ${backupDir}/backup.0/files
 
 # create backup of files
 rsync -a ${owncloudPath} ${backupDir}/backup.0/files
+rsync -a ${owncloudDataPath} ${backupDir}/backup.0/data
 
 # create backup of database (if enabled)
 if [ $mysqlBackup = true ]; then
